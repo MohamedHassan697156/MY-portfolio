@@ -103,7 +103,15 @@ hr.divider{border:none;border-top:1px solid var(--border);margin:0}
 .contact-link{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 22px;text-decoration:none;color:var(--text);font-size:14px;font-weight:500;transition:border-color .2s}
 .contact-link:hover{border-color:var(--accent);color:var(--accent)}
 footer{border-top:1px solid var(--border);padding:24px 48px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
-@media(max-width:768px){nav{padding:16px 20px}.nav-links{display:none}.hero{padding:100px 20px 60px}section{padding:64px 20px}.about-grid{grid-template-columns:1fr}.about-photo-wrap{max-width:220px;aspect-ratio:1/1}.skills-wrap,.apps-wrap{padding:64px 20px}footer{flex-direction:column;gap:8px;text-align:center}}
+.shot-group{margin-bottom:40px}
+.shot-group-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
+.shot-group-name{font-size:18px;font-weight:700;color:var(--text)}
+.shot-group-links{display:flex;gap:10px}
+.shot-row{display:flex;gap:16px;overflow-x:auto;padding-bottom:12px;scrollbar-width:thin}
+.shot-row::-webkit-scrollbar{height:6px}
+.shot-row::-webkit-scrollbar-thumb{background:var(--border);border-radius:10px}
+.shot-row img{height:360px;width:auto;border-radius:16px;border:1px solid var(--border);object-fit:cover;flex-shrink:0;background:var(--card)}
+@media(max-width:768px){nav{padding:16px 20px}.nav-links{display:none}.hero{padding:100px 20px 60px}section{padding:64px 20px}.about-grid{grid-template-columns:1fr}.about-photo-wrap{max-width:220px;aspect-ratio:1/1}.skills-wrap,.apps-wrap{padding:64px 20px}footer{flex-direction:column;gap:8px;text-align:center}.shot-row img{height:280px}}
 </style>
 </head>
 <body>
@@ -113,7 +121,7 @@ footer{border-top:1px solid var(--border);padding:24px 48px;display:flex;justify
   <div class="nav-links">
     <a href="#about">About</a><a href="#skills">Skills</a>
     <a href="#experience">Experience</a><a href="#projects">Projects</a>
-    <a href="#apps">Apps</a><a href="#contact">Contact</a>
+    <a href="#apps">Apps</a><a href="#screenshots">Screenshots</a><a href="#contact">Contact</a>
   </div>
   <a class="nav-cta" href="#contact">Hire Me</a>
 </nav>
@@ -127,14 +135,14 @@ footer{border-top:1px solid var(--border);padding:24px 48px;display:flex;justify
       <span>Available for new opportunities</span>
     </div>
     <h1>Mohamed<br/><em>Hassan</em></h1>
-    <p class="hero-sub">Flutter Mobile Developer with <strong>3+ years</strong> shipping <strong>9+ production apps</strong> to Google Play &amp; App Store — ride-hailing, fintech, government-adjacent, and on-demand platforms. Specialist in <strong>JWT auth</strong>, <strong>Arabic RTL</strong>, <strong>offline-first</strong> architecture, and <strong>mobile security</strong>.</p>
+    <p class="hero-sub">Flutter Mobile Developer with <strong>3+ years</strong> shipping <strong>12+ production apps</strong> to Google Play &amp; App Store — ride-hailing, fintech, on-demand services, beauty booking, and e-commerce platforms. Specialist in <strong>JWT auth</strong>, <strong>Arabic RTL</strong>, <strong>offline-first</strong> architecture, and <strong>mobile security</strong>.</p>
     <div class="hero-actions">
       <a class="btn-primary" href="#projects">View My Work</a>
       <a class="btn-outline" href="#contact">Get in Touch</a>
     </div>
     <div class="hero-stats">
       <div><div class="stat-num">3<span>+</span></div><div class="stat-lbl">Years Experience</div></div>
-      <div><div class="stat-num">9<span>+</span></div><div class="stat-lbl">Production Apps</div></div>
+      <div><div class="stat-num">12<span>+</span></div><div class="stat-lbl">Production Apps</div></div>
       <div><div class="stat-num">2</div><div class="stat-lbl">App Stores</div></div>
       <div><div class="stat-num">30<span>%</span></div><div class="stat-lbl">Code Efficiency ↑</div></div>
     </div>
@@ -151,7 +159,7 @@ footer{border-top:1px solid var(--border);padding:24px 48px;display:flex;justify
     <div class="about-text">
       <div class="section-eyebrow">About Me</div>
       <h3>Building apps people actually use.</h3>
-      <p>Mid-level Flutter &amp; Dart developer based in <strong>Dammam, KSA</strong>, with 3+ years of end-to-end ownership across 9+ cross-platform apps. I've shipped fintech e-wallets, ride-hailing platforms, on-demand home services, and construction management tools.</p>
+      <p>Mid-level Flutter &amp; Dart developer based in <strong>Dammam, KSA</strong>, with 3+ years of end-to-end ownership across 12+ cross-platform apps. I've shipped fintech e-wallets, ride-hailing platforms, on-demand home &amp; car-wash services, beauty booking marketplaces, and e-commerce apps.</p>
       <p>At Naher Technology I own full release cycles — architecture, CI/CD, store deployment, and post-launch monitoring. Clean Architecture + BLoC/Cubit is my daily default, not an afterthought.</p>
       <p>Open to on-site roles in Dammam · Al-Khobar · Dhahran, and remote positions across KSA and MENA.</p>
       <div class="about-chips">
@@ -267,6 +275,24 @@ footer{border-top:1px solid var(--border);padding:24px 48px;display:flex;justify
       <div class="proj-tech"><span class="proj-tag">Flutter</span><span class="proj-tag">Dart</span><span class="proj-tag">REST API</span></div>
       <div class="proj-links"><a class="store-btn play" href="https://play.google.com/store/apps/details?id=com.nahr.asad" target="_blank">▶ Google Play</a><a class="store-btn apple" href="https://apps.apple.com/us/iphone/search?term=nahr.asad" target="_blank">⬛ App Store</a></div>
     </div>
+    <div class="proj-card">
+      <div class="proj-header"><div class="proj-name">CarBreak</div><span class="proj-type">Car Wash · User + Provider</span></div>
+      <div class="proj-desc">On-demand car wash booking — auto-accept job requests, live request queue, service history, Arabic/English onboarding.</div>
+      <div class="proj-tech"><span class="proj-tag">Flutter</span><span class="proj-tag">Cubit</span><span class="proj-tag">REST API</span><span class="proj-tag">FCM</span><span class="proj-tag">Arabic RTL</span></div>
+      <div class="proj-links"><a class="store-btn apple" href="https://apps.apple.com/us/app/%D9%83%D8%A7%D8%B1-%D8%A8%D8%B1%D9%8A%D9%83-car-break/id6756943424" target="_blank">⬛ App Store</a><a class="store-btn play" href="https://play.google.com/store/apps/details?id=com.nahr.car_brake_provider" target="_blank">▶ Google Play (Provider)</a></div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header"><div class="proj-name">Trimly</div><span class="proj-type">Beauty Booking</span></div>
+      <div class="proj-desc">Beauty services marketplace — discover professionals &amp; salons, book appointments, manage upcoming/completed requests.</div>
+      <div class="proj-tech"><span class="proj-tag">Flutter</span><span class="proj-tag">Cubit</span><span class="proj-tag">Firebase</span><span class="proj-tag">REST API</span></div>
+      <div class="proj-links"><a class="store-btn play" href="https://play.google.com/store/apps/details?id=com.nahr.trimly" target="_blank">▶ Google Play</a><a class="store-btn apple" href="https://apps.apple.com/us/app/trimly/id6760408024" target="_blank">⬛ App Store</a></div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header"><div class="proj-name">Fresh IQ</div><span class="proj-type">E-Commerce</span></div>
+      <div class="proj-desc">Grocery &amp; retail shopping app — product browsing, cart &amp; discounts, checkout, partner storefronts (e.g. Carrefour).</div>
+      <div class="proj-tech"><span class="proj-tag">Flutter</span><span class="proj-tag">REST API</span><span class="proj-tag">Payment Gateway</span></div>
+      <div class="proj-links"><a class="store-btn play" href="https://play.google.com/store/apps/details?id=com.nahr.Fresh" target="_blank">▶ Google Play</a></div>
+    </div>
   </div>
 </section>
 
@@ -285,8 +311,99 @@ footer{border-top:1px solid var(--border);padding:24px 48px;display:flex;justify
     <div class="app-pill"><div class="app-pill-name">ASSAD</div><div class="app-pill-links"><a class="app-pill-link" href="https://play.google.com/store/apps/details?id=com.nahr.asad" target="_blank">▶ Play</a><a class="app-pill-link" href="https://apps.apple.com/us/iphone/search?term=nahr.asad" target="_blank">⬛ iOS</a></div></div>
     <div class="app-pill"><div class="app-pill-name">Primo</div><div class="app-pill-links"><a class="app-pill-link" href="https://play.google.com/store/apps/details?id=com.nahr.primo" target="_blank">▶ Play</a></div></div>
     <div class="app-pill"><div class="app-pill-name">OctoBoss</div><div class="app-pill-links"><a class="app-pill-link" href="https://play.google.com/store/apps/details?id=com.nahr.octoboss_user" target="_blank">▶ Play</a></div></div>
+    <div class="app-pill"><div class="app-pill-name">CarBreak</div><div class="app-pill-links"><a class="app-pill-link" href="https://apps.apple.com/us/app/%D9%83%D8%A7%D8%B1-%D8%A8%D8%B1%D9%8A%D9%83-car-break/id6756943424" target="_blank">⬛ iOS</a><a class="app-pill-link" href="https://play.google.com/store/apps/details?id=com.nahr.car_brake_provider" target="_blank">▶ Play</a></div></div>
+    <div class="app-pill"><div class="app-pill-name">Trimly</div><div class="app-pill-links"><a class="app-pill-link" href="https://play.google.com/store/apps/details?id=com.nahr.trimly" target="_blank">▶ Play</a><a class="app-pill-link" href="https://apps.apple.com/us/app/trimly/id6760408024" target="_blank">⬛ iOS</a></div></div>
+    <div class="app-pill"><div class="app-pill-name">Fresh IQ</div><div class="app-pill-links"><a class="app-pill-link" href="https://play.google.com/store/apps/details?id=com.nahr.Fresh" target="_blank">▶ Play</a></div></div>
   </div>
 </div></div>
+
+<hr class="divider"/>
+
+<section id="screenshots">
+  <div class="section-eyebrow">Screenshots</div>
+  <div class="section-title">A closer look.</div>
+  <div class="section-sub">Real screens from apps live on the stores.</div>
+
+  <div class="shot-group">
+    <div class="shot-group-head">
+      <div class="shot-group-name">Move Now — Ride-Hailing</div>
+      <div class="shot-group-links"><a class="store-btn play" href="https://play.google.com/store/apps/details?id=com.nahrdev.move_now" target="_blank">▶ Google Play</a><a class="store-btn apple" href="https://apps.apple.com/us/app/move-now/id6745511094" target="_blank">⬛ App Store</a></div>
+    </div>
+    <div class="shot-row">
+      <img src="assets/screens/movenow-1.webp" alt="Move Now language selection screen"/>
+      <img src="assets/screens/movenow-2.webp" alt="Move Now live driver tracking screen"/>
+    </div>
+  </div>
+
+  <div class="shot-group">
+    <div class="shot-group-head">
+      <div class="shot-group-name">ASSAD — Construction Project Management</div>
+      <div class="shot-group-links"><a class="store-btn play" href="https://play.google.com/store/apps/details?id=com.nahr.asad" target="_blank">▶ Google Play</a></div>
+    </div>
+    <div class="shot-row">
+      <img src="assets/screens/assad-2.webp" alt="ASSAD units and project tracking screen"/>
+      <img src="assets/screens/assad-1.webp" alt="ASSAD project visibility and unit details screen"/>
+    </div>
+  </div>
+
+  <div class="shot-group">
+    <div class="shot-group-head">
+      <div class="shot-group-name">Rabbito — Food &amp; Goods Delivery</div>
+      <div class="shot-group-links"><a class="store-btn play" href="https://play.google.com/store/apps/details?id=com.nahr.rabbito_user" target="_blank">▶ Google Play</a></div>
+    </div>
+    <div class="shot-row">
+      <img src="assets/screens/rabbito-2.webp" alt="Rabbito app splash logo"/>
+      <img src="assets/screens/rabbito-1.webp" alt="Rabbito home screen with restaurant and market options"/>
+    </div>
+  </div>
+
+  <div class="shot-group">
+    <div class="shot-group-head">
+      <div class="shot-group-name">CarBreak — Car Wash Booking</div>
+      <div class="shot-group-links"><a class="store-btn apple" href="https://apps.apple.com/us/app/%D9%83%D8%A7%D8%B1-%D8%A8%D8%B1%D9%8A%D9%83-car-break/id6756943424" target="_blank">⬛ App Store</a><a class="store-btn play" href="https://play.google.com/store/apps/details?id=com.nahr.car_brake_provider" target="_blank">▶ Google Play</a></div>
+    </div>
+    <div class="shot-row">
+      <img src="assets/screens/carbreak-1.webp" alt="CarBreak language selection screen"/>
+      <img src="assets/screens/carbreak-2.webp" alt="CarBreak provider new request screen"/>
+      <img src="assets/screens/carbreak-3.webp" alt="CarBreak assigned requests screen"/>
+    </div>
+  </div>
+
+  <div class="shot-group">
+    <div class="shot-group-head">
+      <div class="shot-group-name">Trimly — Beauty Services Booking</div>
+      <div class="shot-group-links"><a class="store-btn play" href="https://play.google.com/store/apps/details?id=com.nahr.trimly" target="_blank">▶ Google Play</a><a class="store-btn apple" href="https://apps.apple.com/us/app/trimly/id6760408024" target="_blank">⬛ App Store</a></div>
+    </div>
+    <div class="shot-row">
+      <img src="assets/screens/trimly-1.webp" alt="Trimly splash screen"/>
+      <img src="assets/screens/trimly-2.webp" alt="Trimly home screen with categories"/>
+      <img src="assets/screens/trimly-3.webp" alt="Trimly my requests screen"/>
+    </div>
+  </div>
+
+  <div class="shot-group">
+    <div class="shot-group-head">
+      <div class="shot-group-name">Fresh IQ — E-Commerce</div>
+      <div class="shot-group-links"><a class="store-btn play" href="https://play.google.com/store/apps/details?id=com.nahr.Fresh" target="_blank">▶ Google Play</a></div>
+    </div>
+    <div class="shot-row">
+      <img src="assets/screens/freshiq-1.webp" alt="Fresh IQ splash screen"/>
+      <img src="assets/screens/freshiq-2.webp" alt="Fresh IQ home screen with categories"/>
+      <img src="assets/screens/freshiq-3.webp" alt="Fresh IQ cart and checkout screen"/>
+    </div>
+  </div>
+
+  <div class="shot-group">
+    <div class="shot-group-head">
+      <div class="shot-group-name">OctoBoss — Provider Dashboard</div>
+      <div class="shot-group-links"><a class="store-btn play" href="https://play.google.com/store/apps/details?id=com.nahr.octoboss_user" target="_blank">▶ Google Play</a></div>
+    </div>
+    <div class="shot-row">
+      <img src="assets/screens/octoboss-1.webp" alt="OctoBoss provider home dashboard"/>
+      <img src="assets/screens/octoboss-2.webp" alt="OctoBoss services list screen"/>
+    </div>
+  </div>
+</section>
 
 <hr class="divider"/>
 
